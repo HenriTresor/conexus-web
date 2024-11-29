@@ -8,22 +8,22 @@ const Footer = () => {
 
 
   return (
-    <footer className="bg-[#101010] text-white m-[2vw] p-[3.5vw] rounded-2xl">
+    <footer className="bg-[rgb(236,236,236)] text-neutral-800 m-[2vw] p-[3.5vw] rounded-2xl">
       <div className="container mx-auto px-4">
         {/* Top Section */}
         <div className="flex flex-wrap justify-between items-center mb-8">
           {/* Logo and QR Code */}
           <div className="flex items-center space-x-3">
             <Image src={`/logo.svg`} width={100} height={100} alt="Conexus Logo" />
-            <div className="text-2xl font-bold">Conexus</div>
+            <div className="text-xl font-bold">Conexus</div>
           </div>
           <div className="hidden md:flex border border-white rounded-full px-4 py-3 gap-2">
             <IoGlobeOutline />
             <select name="" id="" className="outline-none bg-transparent font-semibold">
-              <option value="english" className="bg-black px-5">
+              <option value="english" className="px-5">
                 English
               </option>
-              <option value="kiny" className="bg-black">
+              <option value="kiny" className="">
                 Kinyarwanda
               </option>
             </select>
@@ -51,7 +51,7 @@ const Footer = () => {
 
           {/* Subscribe Section */}
           <div className="lg:w-3/5 flex flex-col space-y-3 px-5">
-            <p className="text-white text-center md:text-left text-xl font-bold">
+            <p className="text-neutral-800 text-center md:text-left text-xl font-bold">
               Subscribe
             </p>
             <p className="text-gray-400 text-center md:text-left">
@@ -77,11 +77,11 @@ const Footer = () => {
         <div className="flex flex-wrap justify-between text-sm text-gray-400">
           {footerLinks.map((section, index) => (
             <div className="w-1/2 md:w-auto mb-4 md:mb-0" key={index}>
-              <h5 className="font-bold text-white mb-2 text-2xl">{section.title}</h5>
+              <h5 className="font-bold text-neutral-800 mb-2 text-xl">{section.title}</h5>
               <ul>
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <Link href={link.href} className="text-white opacity-55 text-lg">
+                    <Link href={link.href} className="text-neutral-800 opacity-55 text-md">
                       {link.label}
                     </Link>
                   </li>
@@ -92,13 +92,13 @@ const Footer = () => {
 
           {/* Blog or Resources Section */}
           <div className="w-1/2 md:w-auto mb-4 md:mb-0">
-            <h5 className="font-bold text-white mb-2 text-2xl">Blog & Resources</h5>
+            <h5 className="font-bold text-neutral-800 mb-2 text-xl">Blog & Resources</h5>
             <ul>
-              <li><Link href="/blog" className="text-white opacity-55 text-lg">Our Blog</Link></li>
-              <li><Link href="/tutorials" className="text-white opacity-55 text-lg">Tutorials</Link></li>
-              <li><Link href="/news" className="text-white opacity-55 text-lg">Company News</Link></li>
-              <li><Link href="/industry-insights" className="text-white opacity-55 text-lg">Industry Insights</Link></li>
-              <li><Link href="/guides" className="text-white opacity-55 text-lg">Guides</Link></li>
+              <li><Link href="/blog" className="text-neutral-800 opacity-55 text-md">Our Blog</Link></li>
+              <li><Link href="/tutorials" className="text-neutral-800 opacity-55 text-md">Tutorials</Link></li>
+              <li><Link href="/news" className="text-neutral-800 opacity-55 text-md">Company News</Link></li>
+              <li><Link href="/industry-insights" className="text-neutral-800 opacity-55 text-md">Industry Insights</Link></li>
+              <li><Link href="/guides" className="text-neutral-800 opacity-55 text-md">Guides</Link></li>
             </ul>
           </div>
 
@@ -109,18 +109,14 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="flex justify-between items-center">
-          {/* Back to top */}
-          <div>
-            <Link href="#" className="text-white opacity-55 text-sm hover:underline">
-              Back to top
-            </Link>
-          </div>
-          {/* Copyright and Email */}
-          <div className="text-center text-gray-500 mt-8 text-xs">
+          <Link href="#" className="text-neutral-800 opacity-55 text-sm hover:underline">
+            Back to top
+          </Link>
+          <div className="text-center text-gray-500 mt-8 text-xs flex items-center">
             Copyright © 2025{" "}
             <a
-              href="mailto:team@conexus.rw"
-              className="hover:underline font-bold text-white"
+              href="mailto:team@brop.rw"
+              className="hover:underline font-bold text-neutral-800"
             >
               team@brop.rw
             </a>

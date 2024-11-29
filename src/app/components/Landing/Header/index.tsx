@@ -15,7 +15,7 @@ function Header({ }: Props) {
   const toggle = () => setIsOpen(prev => !prev)
   return (
     <section className="min-w-full flex p-1 px-3 items-center justify-between sticky top-0 backdrop:blur-lg z-50 bg-white shadow-md">
-      <div className="w-auto  gap-2 hidden md:flex">
+      <div className="w-auto max-w-[33.33%]  gap-2 hidden md:flex">
         {headerListItems.map((item, index) => (
           <a
             className={`p-2 backdrop:blur-lg rounded-full pl-4 pr-4  ${index == 0
@@ -54,10 +54,10 @@ function Header({ }: Props) {
           </div>
         )
       }
-      <div>
+      <div className="md:w-[20.33%] w-auto flex items-center  justify-center">
         <Image src={`/logo.svg`} className="w-[60px]" width={100} height={100} alt="Conexus Logo" />
       </div>
-      <div className="px-px p-[0.65rem] md:p-0 rounded-full bg-orange-blue-gradient">
+      <div className="md:w-[25%] W-auto px-px p-[0.65rem] md:p-0 rounded-full flex justify-end">
         <Link
           className={`  rounded-full p-3   bg-faded-orange-blue-gradient bg-white`}
           href=""
